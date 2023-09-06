@@ -5,12 +5,9 @@ This repository serves as a public archive for the quantitative research and sys
 ## Repository Structure
 
 - 📁 **QuantResearch**: This folder contains all the research papers produced by Anan Capital. Research papers are mainly empirical studies related to trading strategies, asset classes, market behavior, and other topics relevant to quantitative finance.
-  
-  - Example Subfolder: `2023_Equity_Indices_Trend_vs_Buy_and_Hold`
-    - Final_Version: Finalized papers ready for public consumption
-    - Supplementary_Material: Any additional material to supplement the main paper
-    - Data: Data used for the research
-    - Code: Code snippets or full programs used in the research
+
+  - Published: 
+    - `01_An_Empirical_Analysis_of_Trend_Following_vs_Buy_and_Hold_Strategies`
 
 - 📁 **SystemPerformance**: This folder holds the performance reports for each trading system developed and managed by Anan Capital. It includes metrics like Annualized Return, Sharpe Ratio, and Maximum Drawdown.
 
