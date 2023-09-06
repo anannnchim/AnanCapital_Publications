@@ -1,0 +1,120 @@
+---
+title: "KnowledgeBase: Backtesting"
+author: "Nanthawat Anancharoenpakorn"
+date: "2023-09-06"
+output: 
+  html_document:
+    toc: true
+    toc_float: false
+abstract: >
+        This document serves as a comprehensive guide for the design and development of trading systems. It consolidates essential methodologies, best practices, and empirical techniques crucial for creating robust and efficient trading models.
+---
+# Note
+
+1. Learn how to design trading strategy from Rob
+2. Refine the instrument level through portfolio level
+
+
+
+## A) Acknowledgments
+All the information contained in this document is drawn from my personal experience, as well as insights gleaned from the books written by Robert Carver.
+
+## B) Things to know
+
+### Backtesting Advice
+
+-   Keep it simple: more complicate will lead to over-fitting.
+-   Fewer alternatives: More variation, more likely to select unprofitable rule by chance. (Multiple Comparisons problem)
+-   Use expanding out of sample or rolling (walk forward) with proper period
+-   Don't drop rules casually: since it is unlikely to differentiate rule's performance.
+-   Pull data across instruments.
+-   Compare on the same return distributions: positive shewed with positive shewed.
+-   Compare return relatively to benchmarks.
+-   Use weighted average of rules: Single rule will lead to overconfident, and it is unlikely to prove that which one is better.
+
+### Backtesting Problem
+
+1.  Overfitting
+
+    -   Type of fitting: Explicit, Implicit and Tatic.
+    -   Too much variation (too many degree of freedom) - "multiple comparisons problem"
+    -   Not enough data (need more than 30 years for rule that highly correlated of 0.8)
+    -   Too complex system.
+
+2.  Survivorship bias
+
+    -   Not consider a delisted stock.
+    
+3.  Implementation 
+
+    -   Cost
+    -   Liquidity
+    -   Capital limit
+4.  Data correctness
+
+    -   Mislead data: single big jump
+    
+    
+### Backtesting Approach
+
+1.  In sample
+2.  Half out of sample
+3.  Expanding out of sample (anchored fitting): Recommended!
+4.  Rolling out of sample (walk forward)
+
+
+### Checking Robustness
+
+1.  parameter sensitivity
+2.  Lag of signal
+3.  Additional slippage
+4.  All market condition, fake crisis, weakness environment.
+
+### Components of System
+
+1.  Universe: tradable markets.
+2.  Buy/Sell Engine: buy/sell conditions with parameters. 
+3.  Position Sizing: how much to buy/sell
+4.  Execution: execution methods.
+5   Rebalancing period 
+
+
+
+## C) Designing System
+
+### 1. Instrument Level through Portfolio Level
+
+##### Single Instrument Level
+
+**Understand characteristic of trading rules**
+
+-   Get the characteristic of instrument given param, cost, speed, objective and correlation.
+-   Parameter selection: Select or drop parameter
+-   Compare with naive approach: buy and hold, random entry exit.
+-   Use random data
+
+**Understand characteristic of position sizing method**
+
+-   Compare with naive approach: standardized volatility, fix percentage
+-   Apply pyramid approach.
+
+**Analyze trading rule along with position sizing method**
+
+-   Prove that given trading rule with particular position sizing method outperform naive.
+
+##### Portfolio Level
+
+-   Apply portfolio level to include diversification benefits by apply it on three level: Avg of single instrument (no diversification), diversify through same asset class, diversify through different asset class.
+
+
+### 2. Designing a Trading Strategy.
+
+
+
+
+## D) Additional Plot
+
+1.  Boxplot of sharp across differnt pairs.
+2.  window length on x with sharp ratio on y [systematic trading - page 59]
+
+
