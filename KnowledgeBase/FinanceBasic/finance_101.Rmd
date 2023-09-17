@@ -1,0 +1,14 @@
+---
+title: "Finance Basic"
+author: "Nanthawat Anancharoenpakorn"
+date: "`r Sys.Date()`"
+output: 
+  html_notebook:
+    toc: true  # Table of contents
+    toc_depth: 3  # Depth of headers to include in contents
+---
+
+
+# Note
+1. Financial properties (nature) - cost, shewness, etc. 
+
