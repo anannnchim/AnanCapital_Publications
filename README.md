@@ -31,7 +31,15 @@ To view system performance:
 2. Select the system you are interested in.
 3. Choose the report type (Monthly, Annual) and download the corresponding PDF.
 
-## Contact Information
+
+### KnowledgeBase
+
+Pending. 
+
+To view system performance:
+1. Navigate to the `KnowledgeBase` folder.
+2. Select the topic you are interested in.
+3. Select specific topic. 
 
 - Name: Nanthawat Anancharoenpakorn
 - LinkedIn: [www.linkedin.com/in/nanthawat-anancharoenpakorn]
