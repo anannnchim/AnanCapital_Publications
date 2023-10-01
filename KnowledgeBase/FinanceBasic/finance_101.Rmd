@@ -8,7 +8,38 @@ output:
     toc_depth: 3  # Depth of headers to include in contents
 ---
 
+```{r library, message=TRUE, warning=FALSE, include=FALSE}
+# Dependencies
+# Load the required libraries
+library(googlesheets4)
+library(tidyverse)
+library(xts)
+library(knitr)
+library(quantmod)
+library(readr)
+library(xts)
+library(PerformanceAnalytics)
+library(ggplot2)
+source('/Users/nanthawat/Documents/GitHub/AnanCapital/R/Function/strategy_testing/moving_average_crossover.R')
+source('/Users/nanthawat/Documents/GitHub/AnanCapital/R/Function/indicators.R')
+source('/Users/nanthawat/Documents/GitHub/AnanCapital/R/Data/import_data.R')
+source('/Users/nanthawat/Documents/GitHub/AnanCapital/R/Function/simulate_independently.R')
+source('/Users/nanthawat/Documents/GitHub/AnanCapital/R/Data/generate_random_data.R')
+
+
+```
+
+
+
 
 # Note
 1. Financial properties (nature) - cost, shewness, etc. 
+
+2. Modeling price (A way to represent price)
+
+- Discrete = f(winning chance, payoff ratio)
+- Continuous = f(mean, sd,)
+
+3.  
+
 

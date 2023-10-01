@@ -12,18 +12,25 @@ abstract: >
 
 # Note
 
-1.  Learn how to design trading strategy from Rob
-
--   From VDO
--   From Systematic book.
-
-2.  Refine the instrument level through portfolio level
+1.  Create systematic way of testing.
 
 ## A) Acknowledgments
 
 All the information contained in this document is drawn from my personal experience, as well as insights gleaned from the books written by Robert Carver.
 
-## B) Things to know
+## B) Terms
+
+-   Testing single, portfolio and universe level
+
+    -   Single: interaction between time series data after apply algorithm.
+
+    -   Portfolio: interaction between fix stream of return to portfolio. Such as holding 10 stocks for a period of time.
+
+    -   Universe: interaction between universe and the model. Given different universe, how does it affect the bottom line and how does portfolio change overtime.
+
+-   Model = a set of rule given param ; Model = { EMA(32), EMA(128)}
+
+## C) Things to know
 
 ### Backtesting Advice
 
@@ -61,7 +68,8 @@ All the information contained in this document is drawn from my personal experie
 
 4.  Data correctness
 
-    -   Mislead data: single big jump
+    -   Mislead data: wronge price from split, XD, etc.
+    -   Bias data: : single big jump
 
 ### Backtesting Approach
 
@@ -75,20 +83,21 @@ All the information contained in this document is drawn from my personal experie
 1.  parameter sensitivity
 2.  Lag of signal
 3.  Additional slippage
-4.  All market condition, fake crisis, weakness environment.
+4.  Include all market condition, fake crisis, weakness environment.
 
 ### Components of System
 
 1.  Universe: tradable markets.
 2.  Buy/Sell Engine: buy/sell conditions with parameters.
 3.  Position Sizing: how much to buy/sell
-4.  Execution: execution methods. 5 Rebalancing period
+4.  Execution: execution methods.
+5.  Rebalancing period
 
-## C) Designing System
+## D) Designing System
 
 ### 1. Instrument Level through Portfolio Level
 
-##### Single Instrument Level
+### Single Instrument Level
 
 **Understand characteristic of trading rules**
 
@@ -106,40 +115,88 @@ All the information contained in this document is drawn from my personal experie
 
 -   Prove that given trading rule with particular position sizing method outperform naive.
 
-##### Portfolio Level
+### Portfolio Level
 
 -   Apply portfolio level to include diversification benefits by apply it on three level: Avg of single instrument (no diversification), diversify through same asset class, diversify through different asset class.
 
 ### 2. Designing a Trading Strategy.
 
-### 
-
 1.  understand characteristic of small number of variation or rule
+    -   Behavior: how it behave in a paricular type of market.
 
--   how it behave in a paricular type of market, speed and correlation
--   Allocate forecast weight to each variation with consideration of uncertainty of sharp ratio (Real data: return)
+    -   Characteristic: Speed, trend length.
 
-## D) Additional Plot
+    -   Correction among variations: Check structure - use square root of 2
 
-1.  Boxplot of sharp across differnt pairs.
+    -   Cost: Check costs of max and min cost of trading
 
-2.  window length on x with sharp ratio on y [systematic trading - page 59]
+    -   Plot: window length on x with sharp ratio on y [systematic trading - page 59]
+2.  Allocate forecast weight to each variation with consideration of uncertainty of sharp ratio (Real data: return)
 
-3.  **check sharp ratio and correlation**
+![](images/Screenshot%202566-09-06%20at%2020.35.28.png){width="259"}
 
-![](images/Screenshot%202566-09-06%20at%2020.35.28.png){width="486"}
+![](images/Screenshot%202566-09-06%20at%2020.40.44.png){width="285"}
 
--   Look back haft or third of trend length
+### 3. My own method
 
--   Information is average sharp ratio of fake data.
+### Position Sizing method testing
 
-2.  **Check turnover**
+-   Use random entry and exit
 
-![](images/Screenshot%202566-09-06%20at%2020.35.28-01.png){width="453"}
+1.  Test with fake and real data
+    -   \% fix cash target
 
-3.  **Check costs of max and min cost of trading**
+    -   \% fix volatility target
 
-![](images/Screenshot%202566-09-06%20at%2020.40.44.png)
+    -   \% fix volatility via expected sharp.
+2.  Check tactic
+    -   Pyramid
 
-4.  **Check correlation structure**
-    -   step of sqrt(2)
+-   Verify performance
+
+### Concept testing
+
+1.  Initiate behaviour: explanation source of inefficiency. (risk averse)
+
+    -   Which risk premium I try to exploit
+
+2.  State the concept: (e.g. cut loss and let profit run)
+
+    -   What are the core principle.
+
+3.  Come up with model: (try Doncian channel or EMA)
+
+4.  Use fake data (vary direction, and volatility)
+
+    -   Three direction: uptrend, downtrend and sideway
+
+    -   Three volatility: low, medium and high.
+
+5.  Understand it: get characteristic and performance. (e.g. return, behavior)
+
+    [Single level vs Portfolio Level vs Universe level]{.underline}
+
+    -   Behavior, Sharp ratio, edges, correlation, speed
+
+6.  Test it: check the performance and compare to naive
+
+    -   Benchmark: B&H and random.
+
+7.  Break it: try to fail. (check robustness)
+
+    -   Test all model, it must work both if the concept hold.
+
+### Empirical testing
+
+1.  Use all market and longest all possible. (e.g. risk averse apply to any asset traded by human.)
+2.  Pick single model. (EMA)
+3.  Check the characteristic of model if it align with fake data.
+4.  Test it
+5.  Break it.
+
+### Live testing
+
+1.  Monitoring system performance and characteristic.
+2.  Gathering feedback and send to research and development.
+
+### 
