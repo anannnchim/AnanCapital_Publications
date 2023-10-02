@@ -11,9 +11,9 @@ This repository serves as a public archive for the quantitative research and sys
 - 📁 **SystemPerformance**: This folder holds the performance reports for each trading system developed and managed by Anan Capital. It includes metrics like Annualized Return, Sharpe Ratio, and Maximum Drawdown.
 
   - 1. Program: `SystemS1`
-    - Monthly_Reports: Performance reports broken down by month
-    - Annual_Reports: Yearly performance summaries
-  - 2. Program: `LongtermEquity`
+    - Navigate to the `Performance` folder and select Quarterly Performance Report
+    - Navigate to the `Insights` folder and select Quaterly Insights
+  - 2. Program: `LongtermEquity` 
 
 ## How to Use
 
