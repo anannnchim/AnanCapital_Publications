@@ -12,7 +12,7 @@ abstract: >
 
 # Note
 
-1.  Create systematic way of testing.
+1.  Use My own method
 
 ## A) Acknowledgments
 
@@ -156,43 +156,82 @@ All the information contained in this document is drawn from my personal experie
 
 ### Concept testing
 
-1.  Initiate behaviour: explanation source of inefficiency. (risk averse)
+#### 1. Outline the context.
+
+-   Data: use fake data.
+
+    -   partition (vary direction, and volatility)
+
+        -   Three direction: uptrend, downtrend and sideway
+
+        -   Three volatility: low, medium and high.
+
+-   Initiate behaviour: explanation source of inefficiency. (risk averse)
 
     -   Which risk premium I try to exploit
 
-2.  State the concept: (e.g. cut loss and let profit run)
+-   State the concept: (e.g. cut loss and let profit run)
 
     -   What are the core principle.
 
-3.  Come up with model: (try Doncian channel or EMA)
+-   Come up with model: (try Doncian channel or EMA)
 
-4.  Use fake data (vary direction, and volatility)
+    -   Design it according to principle.
 
-    -   Three direction: uptrend, downtrend and sideway
+#### 2. Design and understand characteristic of trading rule.
 
-    -   Three volatility: low, medium and high.
+-   Design and understand it: get characteristic and performance. (e.g. return, behavior) given a set of partitions
 
-5.  Understand it: get characteristic and performance. (e.g. return, behavior)
+#### 3. Break it: try to fail. (check robustness)
 
-    [Single level vs Portfolio Level vs Universe level]{.underline}
+-   check robustness: parameter sensitivity
 
-    -   Behavior, Sharp ratio, edges, correlation, speed
+    -   inverse signal
 
-6.  Test it: check the performance and compare to naive
+-   find weakness: when to fail, how to fail
+
+<!-- -->
+
+-   compare with naive:
 
     -   Benchmark: B&H and random.
-
-7.  Break it: try to fail. (check robustness)
-
     -   Test all model, it must work both if the concept hold.
+
+-   Verify with different context.
+
+    -   Use other model to represent price.
+
+    -   get expectation from different of 9 regimes.
+
+-   Apply universal market
+
+    -   [Single level vs Portfolio Level vs Universe level]{.underline}
+
+        -   Behavior, Sharp ratio, edges, correlation, speed
+
+#### 4. Summary
+
+-   Explain the model and behavior, why it should work, when it should not work.
 
 ### Empirical testing
 
-1.  Use all market and longest all possible. (e.g. risk averse apply to any asset traded by human.)
-2.  Pick single model. (EMA)
-3.  Check the characteristic of model if it align with fake data.
-4.  Test it
-5.  Break it.
+-   Use all market and longest all possible. (e.g. risk averse apply to any asset traded by human.)
+
+1.  Verify properties from concept testing.
+    -   Check the characteristic of model if it align with fake data.
+2.  Test it
+3.  Break it.
+4.  Verify fake properties from fake data.
+5.  avg. trade per year.
+6.  Verify with real data: For trend from 50 days to 200 days, ema crossover system can capture around 80% of trend.
+
+<!-- -->
+
+C)  Concept. Want to generate symmetric outcome to asymmetric bet. (Prove that after apply algorithm, we convert symmetric outcome to asymmetric outcome.)
+
+-   one plot, one table
+
+-   one table
 
 ### Live testing
 
@@ -200,3 +239,11 @@ All the information contained in this document is drawn from my personal experie
 2.  Gathering feedback and send to research and development.
 
 ### 
+
+Apply with another random price and check the result.
+
+```{r}
+price = generate_continuous_price(0.01,.03,100)
+plot(price)
+create_annual_performance_table(dailyReturn(price))
+```

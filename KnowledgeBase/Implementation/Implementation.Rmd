@@ -1,0 +1,49 @@
+---
+title: "Implementation"
+author: "Nanthawat Anancharoenpakorn"
+date: "2023-10-12"
+output: 
+  html_document:
+    toc: true
+    toc_float: false
+abstract: >
+        This document serves as a framework of implement trading system. 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+1. Process
+2. Platform
+
+
+
+Components of an investment program. 
+
+
+Paper
+0. Research summary: Research document on that strategy.
+1. Strategic Summary: Single page that explain trading system.
+2. Annual Report, Monthly Report: The thing I have every Q.
+3. Performance summary:
+-   Cummulative: website, (add report)
+-   Year to Year: Report
+
+Program
+1. Portfolio monitoring: googlesheet
+2. Database: yahoo finance
+3. Execution program: manual 
+4. Data Storage: googlesheet
+
+
+
+
+
+
+
+
+
+
