@@ -12,7 +12,10 @@ abstract: >
 
 # Note
 
-1.  Use My own method
+1.  Further study
+    -   Price modeling: stocastic process, random walk, white noise.
+
+    -   Simulation: Bootstrapping, Monte Carlo.
 
 ## A) Acknowledgments
 
@@ -198,71 +201,52 @@ This is the process of finding how to fail, find all the possible reason why it 
 
     -   Liquidity (Empirical)
 
--   3.3 Market checking (empirical)
+-   3.3 Market checking
 
-    -   Use other model to represent price: try different model.(Need to simulate if using random data)
-    -   Change in regime: change in volatility and return.
-    -   Abnormal return: market shock. 
+    -   Does trend following add value given different market regimes.
 
+        -   Get characteristic of system: correlation, turnover.
+
+        -   Strategy comparison
+
+            -   Compare with buy and hold, inverse signal and random.
+
+    -   Abnormal return: market shock.
 
 -   3.4 Apply universal market (how it performs as a whole)
 
     -   [Single level, Portfolio level and Universal level]{.underline}
+    -   Apply 10 stocks that 2 is winner and 8 loseer, check if system can capture two stocks on avg.
 
-<!-- -->
+-   3.5 Tactic
 
--   3.5 Strategy comparing
+    -   Pyramid
 
-    -   inverse signal
-
-    -   Benchmark: B&H and random.
-
-    -   Use SMA to check robustness.
-
--   Summary on how to fail.
-
-    -   If parameter change by X%
-
-    -   If lag signal by Xday
-
-    -   if cost increase by X%
+    -   Multiple rules: check if multiple is better .
 
 #### 4. Summary
 
+-   What are the core model and principle?
 -   Explain the model and behavior, why it should work, when it should not work.
--   get expectation from different of 9 regimes.
+-   What are the expectation from different of 9 regimes given the model.
 
 ### Empirical testing
 
 -   Use all market and longest all possible. (e.g. risk averse apply to any asset traded by human.)
 
-1.  Verify properties from concept testing.
-    -   Check the characteristic of model if it align with fake data.
-2.  Test it
-3.  Break it.
-4.  Verify fake properties from fake data.
-5.  avg. trade per year.
-6.  Verify with real data: For trend from 50 days to 200 days, ema crossover system can capture around 80% of trend.
+    Verify properties from concept testing.
 
-<!-- -->
+#### 1. Verify model behavior and properties from concept testing.
 
-C)  Concept. Want to generate symmetric outcome to asymmetric bet. (Prove that after apply algorithm, we convert symmetric outcome to asymmetric outcome.)
+-   Check the characteristic of model if it align with fake data.
 
--   one plot, one table
+#### 2. Decide how many model to use.
 
--   one table
+#### 3. Fitting weight to each forecast or model.
+
+### Finalize paper like: does trend following works on stocks?
 
 ### Live testing
 
 1.  Monitoring system performance and characteristic.
 2.  Gathering feedback and send to research and development.
-
-### 
-
-Apply with another random price and check the result.
-
-```{r}
-price = generate_continuous_price(0.01,.03,100)
-plot(price)
-create_annual_performance_table(dailyReturn(price))
-```
