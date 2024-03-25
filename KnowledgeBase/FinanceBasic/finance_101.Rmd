@@ -1,5 +1,5 @@
 ---
-title: "Finance Basic"
+title: "Investment"
 author: "Nanthawat Anancharoenpakorn"
 date: "`r Sys.Date()`"
 output: 
@@ -29,29 +29,31 @@ source('/Users/nanthawat/Documents/GitHub/AnanCapital/R/Data/generate_random_dat
 
 ```
 
+# Investment Analysis using First Principle Analysis
+
+## 1. Define Fundamental Principle
+
+1. Market can go up and down. There is no pre-defined function that hide behind price movement. 
+2. High volatility will wipe out initial capital. 
+
+## 2. Break down the problem
+
+1. We need to make money by maximize profit function f(weight) =  X * weight, where X is a random variable of daily return.
+
+## 3. Analyze from the groud up
+
+## 4. Synthesize information
+
+1. Invest Buy and Hold to many asset class [benefit from market and diversification]
+2. Apply TF strategy to each market class [Exploit behavior alpha]
+3. Apply TF across asset class [Benefit Additonally from diversification ]
 
 
+## 5. Apply and Test 
 
-# Note
-1. Financial properties (nature) - cost, shewness, etc. 
-
-2. Modeling price (A way to represent price)
-
-- Discrete = f(winning chance, payoff ratio)
-- Continuous = f(mean, sd,)
-
-3.  
-
-
-
-
-### 1. Monte Carlo simulation
-
-What is Monte Carlo simulation
-
-It's about estimate unknown quantity using inference statistic. 
-
-
+1. Test that buy and hold is add value[Skip]
+2. Test if Sharpe ratio of TF after cost is significantly higher than static buy and hold. 
+3. Test if we construct portfolio of TF system significantly has higher Sharpe. 
 
 
 

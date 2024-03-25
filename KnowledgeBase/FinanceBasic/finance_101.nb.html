@@ -11,9 +11,9 @@
 
 <meta name="author" content="Nanthawat Anancharoenpakorn" />
 
-<meta name="date" content="2023-11-13" />
+<meta name="date" content="2024-03-19" />
 
-<title>Finance Basic</title>
+<title>Investment</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1748,18 +1748,26 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Finance Basic</h1>
+<h1 class="title toc-ignore">Investment</h1>
 <h4 class="author">Nanthawat Anancharoenpakorn</h4>
-<h4 class="date">2023-11-13</h4>
+<h4 class="date">2024-03-19</h4>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#note" id="toc-note">Note</a>
+<li><a href="#investment-analysis-using-first-principle-analysis" id="toc-investment-analysis-using-first-principle-analysis">Investment
+Analysis using First Principle Analysis</a>
 <ul>
-<li><a href="#monte-carlo-simulation" id="toc-monte-carlo-simulation">1.
-Monte Carlo simulation</a></li>
+<li><a href="#define-fundamental-principle" id="toc-define-fundamental-principle">1. Define Fundamental
+Principle</a></li>
+<li><a href="#break-down-the-problem" id="toc-break-down-the-problem">2.
+Break down the problem</a></li>
+<li><a href="#analyze-from-the-groud-up" id="toc-analyze-from-the-groud-up">3. Analyze from the groud up</a></li>
+<li><a href="#synthesize-information" id="toc-synthesize-information">4.
+Synthesize information</a></li>
+<li><a href="#apply-and-test" id="toc-apply-and-test">5. Apply and
+Test</a></li>
 </ul></li>
 </ul>
 </div>
@@ -1767,28 +1775,50 @@ Monte Carlo simulation</a></li>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
-<div id="note" class="section level1">
-<h1>Note</h1>
+<div id="investment-analysis-using-first-principle-analysis" class="section level1">
+<h1>Investment Analysis using First Principle Analysis</h1>
+<div id="define-fundamental-principle" class="section level2">
+<h2>1. Define Fundamental Principle</h2>
 <ol style="list-style-type: decimal">
-<li><p>Financial properties (nature) - cost, shewness, etc.</p></li>
-<li><p>Modeling price (A way to represent price)</p></li>
+<li>Market can go up and down. There is no pre-defined function that
+hide behind price movement.</li>
+<li>High volatility will wipe out initial capital.</li>
 </ol>
-<ul>
-<li>Discrete = f(winning chance, payoff ratio)</li>
-<li>Continuous = f(mean, sd,)</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li></li>
+</div>
+<div id="break-down-the-problem" class="section level2">
+<h2>2. Break down the problem</h2>
+<ol style="list-style-type: decimal">
+<li>We need to make money by maximize profit function f(weight) = X *
+weight, where X is a random variable of daily return.</li>
 </ol>
-<div id="monte-carlo-simulation" class="section level3">
-<h3>1. Monte Carlo simulation</h3>
-<p>What is Monte Carlo simulation</p>
-<p>It’s about estimate unknown quantity using inference statistic.</p>
+</div>
+<div id="analyze-from-the-groud-up" class="section level2">
+<h2>3. Analyze from the groud up</h2>
+</div>
+<div id="synthesize-information" class="section level2">
+<h2>4. Synthesize information</h2>
+<ol style="list-style-type: decimal">
+<li>Invest Buy and Hold to many asset class [benefit from market and
+diversification]</li>
+<li>Apply TF strategy to each market class [Exploit behavior alpha]</li>
+<li>Apply TF across asset class [Benefit Additonally from
+diversification ]</li>
+</ol>
+</div>
+<div id="apply-and-test" class="section level2">
+<h2>5. Apply and Test</h2>
+<ol style="list-style-type: decimal">
+<li>Test that buy and hold is add value[Skip]</li>
+<li>Test if Sharpe ratio of TF after cost is significantly higher than
+static buy and hold.</li>
+<li>Test if we construct portfolio of TF system significantly has higher
+Sharpe.</li>
+</ol>
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRmluYW5jZSBCYXNpYyIKYXV0aG9yOiAiTmFudGhhd2F0IEFuYW5jaGFyb2VucGFrb3JuIgpkYXRlOiAiYHIgU3lzLkRhdGUoKWAiCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIHRvYzogdHJ1ZSAgIyBUYWJsZSBvZiBjb250ZW50cwogICAgdG9jX2RlcHRoOiAzICAjIERlcHRoIG9mIGhlYWRlcnMgdG8gaW5jbHVkZSBpbiBjb250ZW50cwotLS0KCmBgYHtyIGxpYnJhcnksIG1lc3NhZ2U9VFJVRSwgd2FybmluZz1GQUxTRSwgaW5jbHVkZT1GQUxTRX0KIyBEZXBlbmRlbmNpZXMKIyBMb2FkIHRoZSByZXF1aXJlZCBsaWJyYXJpZXMKbGlicmFyeShnb29nbGVzaGVldHM0KQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeSh4dHMpCmxpYnJhcnkoa25pdHIpCmxpYnJhcnkocXVhbnRtb2QpCmxpYnJhcnkocmVhZHIpCmxpYnJhcnkoeHRzKQpsaWJyYXJ5KFBlcmZvcm1hbmNlQW5hbHl0aWNzKQpsaWJyYXJ5KGdncGxvdDIpCnNvdXJjZSgnL1VzZXJzL25hbnRoYXdhdC9Eb2N1bWVudHMvR2l0SHViL0FuYW5DYXBpdGFsL1IvRnVuY3Rpb24vc3RyYXRlZ3lfdGVzdGluZy9tb3ZpbmdfYXZlcmFnZV9jcm9zc292ZXIuUicpCnNvdXJjZSgnL1VzZXJzL25hbnRoYXdhdC9Eb2N1bWVudHMvR2l0SHViL0FuYW5DYXBpdGFsL1IvRnVuY3Rpb24vaW5kaWNhdG9ycy5SJykKc291cmNlKCcvVXNlcnMvbmFudGhhd2F0L0RvY3VtZW50cy9HaXRIdWIvQW5hbkNhcGl0YWwvUi9EYXRhL2ltcG9ydF9kYXRhLlInKQpzb3VyY2UoJy9Vc2Vycy9uYW50aGF3YXQvRG9jdW1lbnRzL0dpdEh1Yi9BbmFuQ2FwaXRhbC9SL0Z1bmN0aW9uL3NpbXVsYXRlX2luZGVwZW5kZW50bHkuUicpCnNvdXJjZSgnL1VzZXJzL25hbnRoYXdhdC9Eb2N1bWVudHMvR2l0SHViL0FuYW5DYXBpdGFsL1IvRGF0YS9nZW5lcmF0ZV9yYW5kb21fZGF0YS5SJykKCgpgYGAKCgoKCiMgTm90ZQoxLiBGaW5hbmNpYWwgcHJvcGVydGllcyAobmF0dXJlKSAtIGNvc3QsIHNoZXduZXNzLCBldGMuIAoKMi4gTW9kZWxpbmcgcHJpY2UgKEEgd2F5IHRvIHJlcHJlc2VudCBwcmljZSkKCi0gRGlzY3JldGUgPSBmKHdpbm5pbmcgY2hhbmNlLCBwYXlvZmYgcmF0aW8pCi0gQ29udGludW91cyA9IGYobWVhbiwgc2QsKQoKMy4gIAoKCgoKIyMjIDEuIE1vbnRlIENhcmxvIHNpbXVsYXRpb24KCldoYXQgaXMgTW9udGUgQ2FybG8gc2ltdWxhdGlvbgoKSXQncyBhYm91dCBlc3RpbWF0ZSB1bmtub3duIHF1YW50aXR5IHVzaW5nIGluZmVyZW5jZSBzdGF0aXN0aWMuIAoKCgoKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW52ZXN0bWVudCIKYXV0aG9yOiAiTmFudGhhd2F0IEFuYW5jaGFyb2VucGFrb3JuIgpkYXRlOiAiYHIgU3lzLkRhdGUoKWAiCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIHRvYzogdHJ1ZSAgIyBUYWJsZSBvZiBjb250ZW50cwogICAgdG9jX2RlcHRoOiAzICAjIERlcHRoIG9mIGhlYWRlcnMgdG8gaW5jbHVkZSBpbiBjb250ZW50cwotLS0KCmBgYHtyIGxpYnJhcnksIG1lc3NhZ2U9VFJVRSwgd2FybmluZz1GQUxTRSwgaW5jbHVkZT1GQUxTRX0KIyBEZXBlbmRlbmNpZXMKIyBMb2FkIHRoZSByZXF1aXJlZCBsaWJyYXJpZXMKbGlicmFyeShnb29nbGVzaGVldHM0KQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeSh4dHMpCmxpYnJhcnkoa25pdHIpCmxpYnJhcnkocXVhbnRtb2QpCmxpYnJhcnkocmVhZHIpCmxpYnJhcnkoeHRzKQpsaWJyYXJ5KFBlcmZvcm1hbmNlQW5hbHl0aWNzKQpsaWJyYXJ5KGdncGxvdDIpCnNvdXJjZSgnL1VzZXJzL25hbnRoYXdhdC9Eb2N1bWVudHMvR2l0SHViL0FuYW5DYXBpdGFsL1IvRnVuY3Rpb24vc3RyYXRlZ3lfdGVzdGluZy9tb3ZpbmdfYXZlcmFnZV9jcm9zc292ZXIuUicpCnNvdXJjZSgnL1VzZXJzL25hbnRoYXdhdC9Eb2N1bWVudHMvR2l0SHViL0FuYW5DYXBpdGFsL1IvRnVuY3Rpb24vaW5kaWNhdG9ycy5SJykKc291cmNlKCcvVXNlcnMvbmFudGhhd2F0L0RvY3VtZW50cy9HaXRIdWIvQW5hbkNhcGl0YWwvUi9EYXRhL2ltcG9ydF9kYXRhLlInKQpzb3VyY2UoJy9Vc2Vycy9uYW50aGF3YXQvRG9jdW1lbnRzL0dpdEh1Yi9BbmFuQ2FwaXRhbC9SL0Z1bmN0aW9uL3NpbXVsYXRlX2luZGVwZW5kZW50bHkuUicpCnNvdXJjZSgnL1VzZXJzL25hbnRoYXdhdC9Eb2N1bWVudHMvR2l0SHViL0FuYW5DYXBpdGFsL1IvRGF0YS9nZW5lcmF0ZV9yYW5kb21fZGF0YS5SJykKCgpgYGAKCiMgSW52ZXN0bWVudCBBbmFseXNpcyB1c2luZyBGaXJzdCBQcmluY2lwbGUgQW5hbHlzaXMKCiMjIDEuIERlZmluZSBGdW5kYW1lbnRhbCBQcmluY2lwbGUKCjEuIE1hcmtldCBjYW4gZ28gdXAgYW5kIGRvd24uIFRoZXJlIGlzIG5vIHByZS1kZWZpbmVkIGZ1bmN0aW9uIHRoYXQgaGlkZSBiZWhpbmQgcHJpY2UgbW92ZW1lbnQuIAoyLiBIaWdoIHZvbGF0aWxpdHkgd2lsbCB3aXBlIG91dCBpbml0aWFsIGNhcGl0YWwuIAoKIyMgMi4gQnJlYWsgZG93biB0aGUgcHJvYmxlbQoKMS4gV2UgbmVlZCB0byBtYWtlIG1vbmV5IGJ5IG1heGltaXplIHByb2ZpdCBmdW5jdGlvbiBmKHdlaWdodCkgPSAgWCAqIHdlaWdodCwgd2hlcmUgWCBpcyBhIHJhbmRvbSB2YXJpYWJsZSBvZiBkYWlseSByZXR1cm4uCgojIyAzLiBBbmFseXplIGZyb20gdGhlIGdyb3VkIHVwCgojIyA0LiBTeW50aGVzaXplIGluZm9ybWF0aW9uCgoxLiBJbnZlc3QgQnV5IGFuZCBIb2xkIHRvIG1hbnkgYXNzZXQgY2xhc3MgW2JlbmVmaXQgZnJvbSBtYXJrZXQgYW5kIGRpdmVyc2lmaWNhdGlvbl0KMi4gQXBwbHkgVEYgc3RyYXRlZ3kgdG8gZWFjaCBtYXJrZXQgY2xhc3MgW0V4cGxvaXQgYmVoYXZpb3IgYWxwaGFdCjMuIEFwcGx5IFRGIGFjcm9zcyBhc3NldCBjbGFzcyBbQmVuZWZpdCBBZGRpdG9uYWxseSBmcm9tIGRpdmVyc2lmaWNhdGlvbiBdCgoKIyMgNS4gQXBwbHkgYW5kIFRlc3QgCgoxLiBUZXN0IHRoYXQgYnV5IGFuZCBob2xkIGlzIGFkZCB2YWx1ZVtTa2lwXQoyLiBUZXN0IGlmIFNoYXJwZSByYXRpbyBvZiBURiBhZnRlciBjb3N0IGlzIHNpZ25pZmljYW50bHkgaGlnaGVyIHRoYW4gc3RhdGljIGJ1eSBhbmQgaG9sZC4gCjMuIFRlc3QgaWYgd2UgY29uc3RydWN0IHBvcnRmb2xpbyBvZiBURiBzeXN0ZW0gc2lnbmlmaWNhbnRseSBoYXMgaGlnaGVyIFNoYXJwZS4gCgoKCgo=</div>
 
 
 
